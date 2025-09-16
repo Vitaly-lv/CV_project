@@ -3,8 +3,7 @@ from openai import OpenAI
 from parse_hh import get_html, extract_vacancy_data, extract_resume_data
 # Инициализация OpenAI-клиента
 
-client = OpenAI(api_key='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') 
-
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 SYSTEM_PROMPT = """
 Проскорь кандидата, насколько он подходит для данной вакансии.
 Сначала напиши короткий анализ, который будет пояснять оценку.
